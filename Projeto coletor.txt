@@ -1,0 +1,37 @@
+Projeto coletor
+
+Tela inicial
+Login
+Matricula
+Nome
+senha
+
+Matricula, senha, so aceita numero, nem aceita digitar letra, todos os campos são abrigatorios
+Após abrir a tela, vai já aparecer os dados disponível e Em uso um do lado do outro,
+Ao das dois clica no numero de colator abre uma janela com dados dos coletor com a informação da matricula digitavel, ao digitar e der enter ele já tras o campo do nome preenchio e regista e fecha essa janelinha, no Em uso mesma coisa, pois ali vou fazer a devolução automático status sempre vai vim ativo porem se aconteceu algo posso mudar o status para inativo ao mudar o status já aparace o campo motivo e observação aparece campos obrigatórios.
+
+Caixa de Disponível, sempre que clicar no coletor automatio para mover ele vai aparecer Em uso, caso quero mudar para outro seria opção, senão ele fica fixo ali, mesma coisa na Caixa Em Uso ele sempre vai aparecer para Disponível, caso não queiro eu mudo
+
+
+Disponivel		
+CD	NºColetor	Tipo Equipamento
+
+Em Uso							
+CD	NºColetor	Tipo Equipamento	Matricula	Usuario	Turno	Dt Hora Retirada	Tempo Em Uso   Usuario Movimentação
+
+Devolução								
+CD	NºColetor	Tipo Equipamento	Matricula	Usuario	Turno	Dt Hora Devolução	Tempo Em Uso	Usuario Movimentação
+
+
+Manutenção										
+CD	NºColetor	Tipo Equipamento	Ultima Matricula	Ultimo Usuario	Turno	Dt Hora Manutenção	Status	Motivo	Observação	Usuario Movimentação
+
+Cadastro Coletor					
+CD	NºColetor	Serial	Tipo Equipamento	Status	Usuario Movimentação
+
+Cadastro Motivo
+Motivo  Usuario Movimentação Dt Hora Movimentação
+
+
+Cadastro Usuario				
+Matricula	Usuario	Area	Turno Função  Perfil	Usuario Movimentação
