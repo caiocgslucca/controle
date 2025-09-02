@@ -75,14 +75,14 @@ if($page === 'cadastro_publico'){
 // HOME - lista disponíveis e em uso
 if($page === 'home'){
     $u = $_SESSION['user'];
-    $disponiveis = query_all("""
+    $disponiveis = query_all("
         SELECT c.id, c.cd, c.numero_coletor, c.serial, c.tipo_equipamento, c.status
         FROM coletores c
         LEFT JOIN uso_atual ua ON ua.coletor_id = c.id
         WHERE ua.id IS NULL AND c.deletado_em IS NULL AND c.status = 'DISPONIVEL'
         ORDER BY c.cd, c.numero_coletor
-    """);
-    $em_uso_raw = query_all("""
+    ");
+    $em_uso_raw = query_all("
         SELECT c.numero_coletor, c.tipo_equipamento, c.serial, c.status,
                ua.matricula, ua.turno, ua.dt_hora_retirada, ua.coletor_id,
                u.nome, u.funcao, u.area, u.cd
@@ -90,7 +90,7 @@ if($page === 'home'){
         JOIN coletores c ON c.id = ua.coletor_id
         LEFT JOIN usuarios u ON u.matricula = ua.matricula
         ORDER BY ua.dt_hora_retirada DESC
-    """);
+    ");
     echo '<div style="display:flex;gap:16px">';
     echo '<div style="flex:1"><h3>Coletores Disponíveis</h3><table><thead><tr><th>Número</th><th>Modelo</th><th>Serial</th></tr></thead><tbody>';
     if(count($disponiveis)){
